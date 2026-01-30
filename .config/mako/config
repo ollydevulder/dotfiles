@@ -1,0 +1,8 @@
+## Behaviour
+group-by=app-name
+
+## Style
+background-color=#2b303b
+border-color=#3b404b
+border-size=3
+border-radius=4

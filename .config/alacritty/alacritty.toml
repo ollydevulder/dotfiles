@@ -1,0 +1,8 @@
+[window]
+opacity = 0.9
+blur = true
+padding = { x = 5, y = 5 }
+dynamic_title = false
+
+[font]
+size = 14
