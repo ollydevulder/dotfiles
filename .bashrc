@@ -6,8 +6,8 @@
 [[ $- != *i* ]] && return
 
 # Prompting
-reset="\e[0m"; dull="\e[2m"; italic="\e[3m"
-PS1="${dull}\u@\h${reset} ${italic}\w${reset}\n \$ "
+reset="\e[0m"; dull="\e[2m"
+PS1="${dull}\u@\h${reset} \w\n \$ "
 
 # Shell options
 shopt -s globstar
