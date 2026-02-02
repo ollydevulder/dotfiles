@@ -6,8 +6,10 @@
 [[ $- != *i* ]] && return
 
 # Prompting
+source /usr/share/git/completion/git-prompt.sh
+export GIT_PS1_SHOWCOLORHINTS=1
 reset="\e[0m"; dull="\e[2m"
-PS1="${dull}\u@\h${reset} \w\n \$ "
+PS1="${dull}\u@\h${reset} \w \$(__git_ps1 '(%s)')\n \$ "
 
 # Shell options
 shopt -s globstar
