@@ -20,6 +20,13 @@ alias ll="$lsbase -l"
 alias grep='grep --color=auto'
 alias less='less -R'
 
+man() {
+    local width=$(tput cols)
+    [ $width -gt 80 ] && width=80
+    env MANWIDTH=$width \
+    man "$@"
+}
+
 # Environment
 add_paths() {
   for d in "$@"; do
