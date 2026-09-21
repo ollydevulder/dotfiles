@@ -7,9 +7,12 @@
 
 # Prompting
 source /usr/share/git/completion/git-prompt.sh
-export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWCOLORHINTS=1 GIT_PS1_SHOWDIRTYSTATE=1
 reset="\e[0m"; dull="\e[2m"
 PS1="${dull}\u@\h${reset} \w \$(__git_ps1 '(%s)')\n \$ "
+
+# Completion
+source /usr/share/git/completion/git-completion.bash
 
 # Shell options
 shopt -s globstar
@@ -35,7 +38,7 @@ add_paths() {
     [[ -d "$d" && ! "$PATH" =~ (^|:)$d(:|$) ]] && PATH="$PATH:$d"
   done
 }
-add_paths ~/.cargo/bin
+add_paths ~/.cargo/bin ~/scripts
 
 EDITOR='nvim'
 MANPAGER='nvim +Man!'

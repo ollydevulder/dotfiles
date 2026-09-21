@@ -18,6 +18,7 @@ set $menu fuzzel
 #
 # Wallpaper
 output * background /usr/share/backgrounds/a_street_with_signs_and_lights_01.png fill
+#output * background /home/olly/Pictures/lilyart.png fill
 
 ## Gaps
 gaps inner 8
@@ -59,9 +60,10 @@ input type:keyboard {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Ctrl+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Ctrl+q exec swaynag -t warning -m 'Quit sway?' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Test
+    bindsym $mod+o floating toggle, resize set 60ppt 100ppt
 
     
 #
