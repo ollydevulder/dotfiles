@@ -24,6 +24,7 @@ alias ls=$lsbase
 alias ll="$lsbase -l"
 alias grep='grep --color=auto'
 alias less='less -R'
+alias tree='tree -C --filesfirst'
 
 man() {
     local width=$(tput cols)

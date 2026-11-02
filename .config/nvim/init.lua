@@ -8,6 +8,8 @@ vim.o.wrap = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.scrolloff = 5
+vim.o.completeopt = "menu,popup,fuzzy,preview"
+vim.o.complete = "o,.,w,b,u,t"
 
 -- Appearance
 vim.cmd.colorscheme("retrobox")
@@ -27,3 +29,4 @@ vim.g.netrw_banner = 0
 -- Plugins
 vim.pack.add { "https://github.com/lervag/vimtex" }
 vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_compiler_latexmk = { aux_dir = ".latexmk_aux" }
